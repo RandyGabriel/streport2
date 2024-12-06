@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File Excel dan Hapus Data</title>
+</head>
+<body>
+    <h2>Unggah File Excel ke Database</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="file">Pilih file Excel:</label>
+        <input type="file" name="file" id="file" required>
+        <br><br>
+        <button type="submit" name="submit">Unggah</button>
+    </form>
+
+    <h2>Perbarui Data dengan File Excel Baru</h2>
+    <form action="update.php" method="post" enctype="multipart/form-data">
+        <label for="file">Pilih file Excel:</label>
+        <input type="file" name="file" id="file" required>
+        <br><br>
+        <button type="submit" name="update">Perbarui</button>
+    </form>
+
+    <h2>Hapus Seluruh Data dari Tabel</h2>
+    <form action="delete.php" method="post">
+        <button type="submit" name="delete">Hapus Seluruh Data</button>
+    </form>
+</body>
+</html>
+
+<p style="font-style: italic;">

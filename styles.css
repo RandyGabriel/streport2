@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 10px black;
+}
+
+.logo::before {
+    content: 'MAJU EXPRESS INDONESIA';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transform: translate(5px, 5px);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s, font-weight 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #45a049;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+    color: #A7FFEB; /* Hijau cerah */
+    font-weight: bold; /* Teks bold */
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

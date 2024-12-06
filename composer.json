@@ -1,0 +1,20 @@
+{
+    "name": "user/streport",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "User\\Streport\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "randygabriel",
+            "email": "gue_rocknroll@live.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
